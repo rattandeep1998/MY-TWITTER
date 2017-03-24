@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+
+  get '/' => 'home#index'
+
+  get '/signin' => 'authentication#signin_get'
+
+  get  '/signup' => 'authentication#signup_get'
+
+  post '/signin' => 'authentication#signin'
+
+  post '/signup' => 'authentication#signup'
+
+  get '/logout' => 'authentication#logout'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
