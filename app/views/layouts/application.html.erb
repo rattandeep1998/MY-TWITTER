@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<!--LogOut Button if user is logged in -->
+<% if @user %>
+<%= link_to 'logout' , '/logout'%>
+<%= @user.email %>
+<% end %>
+
 <%= yield %>
 
 </body>
