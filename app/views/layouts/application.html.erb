@@ -9,9 +9,12 @@
 <body>
 
 <!--LogOut Button if user is logged in -->
-<% if @user %>
+
+<% if user_signed_in? %>
+
 <%= link_to 'logout' , '/logout'%>
-<%= @user.email %>
+
+<%= current_user.email %>
 <% end %>
 
 <%= yield %>

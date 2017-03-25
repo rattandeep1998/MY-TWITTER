@@ -1,11 +1,16 @@
 class HomeController < ApplicationController
+	before_action :authenticate_user
 
 	def index
-  		if user_signed_in?
-  			@user = current_user
-  		else
-  			return redirect_to '/signin'
-  		end
-  	end
+  end
 
+  def create_tweet
+  end
+
+  def like
+  end
+
+  def follow
+  end
+  
 end
