@@ -1,5 +1,25 @@
 <h2>
 Hello , 
 <%= current_user.email %>
-
 </h2>
+
+<br>
+
+<%= form_tag '/create_tweet' do%>
+<%= text_area_tag :content %>
+
+<br>
+
+<%= submit_tag "Create Tweet"
+
+<% end %>
+
+<% @tweets.each do |tweet| %>
+
+<p>
+	<%= tweet.content %> , 
+	<%= tweet.user.email %> , 
+	<%= tweet.created_at.to_formatted_s(:short) %>
+</p>
+
+<% end %>
