@@ -16,10 +16,6 @@ Hello ,
 
 <% @tweets.each do |tweet| %>
 
-<p>
-	<%= tweet.content %> , 
-	<%= tweet.user.email %> , 
-	<%= tweet.created_at.to_formatted_s(:short) %>
-</p>
+<%= render 'tweet' , :tweet => tweet %>
 
 <% end %>
